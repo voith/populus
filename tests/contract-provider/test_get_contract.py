@@ -21,8 +21,11 @@ def test_latest_deployed_version_is_used(chain):
     provider = chain.provider
 
     math_1, deploy_txn_1 = provider.deploy_contract('Math')
+    from populus.utils.contracts import find_deploy_block_number
+    import pdb; pdb.set_trace()
     math_2, deploy_txn_2 = provider.deploy_contract('Math')
-
+    math_3, deploy_txn_3 = provider.deploy_contract('Math')
+    import pdb; pdb.set_trace()
     assert math_1.address != math_2.address
 
     math = provider.get_contract('Math')
