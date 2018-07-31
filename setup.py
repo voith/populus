@@ -32,7 +32,7 @@ setup(
         "cytoolz>=0.8.2",
         "toposort>=1.4",
         "watchdog>=0.8.3",
-        "web3>=4.4.0,<5",
+        "web3>=4.5.0,<5",
     ],
     license="MIT",
     zip_safe=False,
