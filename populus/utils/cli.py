@@ -26,7 +26,7 @@ from .wait import (
     Timeout,
 )
 
-from web3.utils.empty import (
+from web3._utils.empty import (
     Empty,
 )
 

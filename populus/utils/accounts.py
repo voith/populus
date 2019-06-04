@@ -9,7 +9,7 @@ from web3.providers.eth_tester import (
 
 
 def is_account_locked(web3, account):
-    if isinstance(web3.providers[0], EthereumTesterProvider):
+    if isinstance(web3.provider, EthereumTesterProvider):
         return not any((is_same_address(account, a) for a in web3.eth.accounts[:10]))
     try:
         web3.eth.sign(account, text='simple-test-data')

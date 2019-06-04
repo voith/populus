@@ -2,9 +2,8 @@ import functools
 import random
 import time
 
-from web3.providers.tester import (
+from web3.providers.eth_tester import (
     EthereumTesterProvider,
-    TestRPCProvider,
 )
 
 
@@ -83,7 +82,7 @@ def poll_until(poll_fn, success_fn, timeout, poll_interval_fn):
 
 
 def is_tester_web3(web3):
-    return isinstance(web3.providers[0], (TestRPCProvider, EthereumTesterProvider))
+    return isinstance(web3.provider, (EthereumTesterProvider, ))
 
 
 def wait_for_transaction_receipt(web3, txn_hash, timeout=120, poll_interval=None):

@@ -23,7 +23,7 @@ def test_getting_contract_with_no_dependencies(multi_registar_chain,
     registrar.set_contract_address('Math', math.address)
 
     math = provider.get_contract('Math')
-    assert math.call().multiply7(3) == 21
+    assert math.functions.multiply7(3).call() == 21
 
 
 def test_latest_deployed_version_is_used(multi_registar_chain):
@@ -34,7 +34,7 @@ def test_latest_deployed_version_is_used(multi_registar_chain):
     assert math_1.address != math_2.address
 
     math = provider.get_contract('Math')
-    assert math.call().multiply7(3) == 21
+    assert math.functions.multiply7(3).call() == 21
 
     assert math.address == math_2.address
 
@@ -92,4 +92,4 @@ def test_get_contract_with_dependency(multi_registar_chain,
     registrar.set_contract_address('Library13', library_13.address)
 
     multiply_13 = provider.get_contract('Multiply13')
-    assert multiply_13.call().multiply13(3) == 39
+    assert multiply_13.functions.multiply13(3).call() == 39

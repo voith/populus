@@ -39,7 +39,7 @@ def test_it_handles_library_dependencies(chain):
     provider = chain.provider
 
     multiply_13, deploy_txn = provider.get_or_deploy_contract('Multiply13')
-    assert multiply_13.call().multiply13(3) == 39
+    assert multiply_13.functions.multiply13(3).call() == 39
     assert deploy_txn is not None
 
 
@@ -50,7 +50,7 @@ def test_it_uses_existing_library_dependencies(chain, library_13):
     registrar.set_contract_address('Library13', library_13.address)
 
     multiply_13, deploy_txn = provider.get_or_deploy_contract('Multiply13')
-    assert multiply_13.call().multiply13(3) == 39
+    assert multiply_13.functions.multiply13(3).call() == 39
     assert deploy_txn is not None
 
     chain_bytecode = chain.web3.eth.getCode(multiply_13.address)

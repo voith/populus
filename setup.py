@@ -22,7 +22,7 @@ setup(
         "contextlib2>=0.5.4",
         "eth-tester[py-evm]==0.1.0-beta.39",
         "eth-utils>=1.0.3,<2.0.0",
-        "jsonschema>=2.5.1",
+        "jsonschema>=2.5.1,<3.0.0",
         "py-geth>=1.9.0",
         "py-solc>=1.2.0",
         "pylru>=1.0.9",
@@ -32,8 +32,8 @@ setup(
         "cytoolz>=0.8.2",
         "toposort>=1.4",
         "watchdog>=0.8.3",
-        "web3>=4.4.0,<5",
-        "eth-abi>1.0.0,<2.0.0"
+        "web3>=5.0.0-beta.2,<6",
+        "eth-abi>=2.0.0b6,<3.0.0"
     ],
     license="MIT",
     zip_safe=False,
