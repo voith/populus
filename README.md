@@ -1,7 +1,7 @@
 # POPULUS
 
 [![Gitter chat](https://badges.gitter.im/ethereum/populus.png)](https://gitter.im/ethereum/populus "Gitter chat")
-[![Build Status](https://travis-ci.org/ethereum/populus.png)](https://travis-ci.org/ethereum/populus)
+[![Build Status](https://travis-ci.org/voith/populus.png)](https://travis-ci.org/voith/populus)
 [![Documentation Status](https://readthedocs.org/projects/populus/badge/?version=latest)](https://readthedocs.org/projects/populus/?badge=latest)
 [![PyPi version](https://img.shields.io/pypi/v/populus.svg)](https://pypi.python.org/pypi/populus)
 [![PyPi downloads](https://img.shields.io/pypi/dm/populus.svg)](https://pypi.python.org/pypi/populus)
