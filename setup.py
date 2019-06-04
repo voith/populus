@@ -20,7 +20,7 @@ setup(
         "anyconfig>=0.7.0",
         "click>=6.6",
         "contextlib2>=0.5.4",
-        "eth-tester[py-evm]==0.1.0-beta.32",
+        "eth-tester[py-evm]==0.1.0-beta.39",
         "eth-utils>=1.0.3,<2.0.0",
         "jsonschema>=2.5.1",
         "py-geth>=1.9.0",
@@ -33,6 +33,7 @@ setup(
         "toposort>=1.4",
         "watchdog>=0.8.3",
         "web3>=4.4.0,<5",
+        "eth-abi>1.0.0,<2.0.0"
     ],
     license="MIT",
     zip_safe=False,
@@ -48,7 +49,6 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
 )
