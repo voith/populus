@@ -87,7 +87,7 @@ def is_tester_web3(web3):
 
 def wait_for_transaction_receipt(web3, txn_hash, timeout=120, poll_interval=None):
     return poll_until(
-        poll_fn=functools.partial(web3.eth.getTransactionReceipt, txn_hash),
+        poll_fn=functools.partial(web3.eth.waitForTransactionReceipt, txn_hash),
         success_fn=lambda r: r is not None and r['blockHash'] is not None,
         timeout=timeout,
         poll_interval_fn=lambda: poll_interval if poll_interval is not None else random.random(),
